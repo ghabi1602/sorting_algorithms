@@ -3,6 +3,8 @@
 
 /* libraries declaration section */
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /* structures declaration section */
 
@@ -24,6 +26,10 @@ typedef struct listint_s
 void print_array(const int *, size_t);
 void print_list(const listint_t *);
 void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
 
+
+/* extra function */
+void swap_nodes(listint_t *node1, listint_t *node2);
 
 #endif
