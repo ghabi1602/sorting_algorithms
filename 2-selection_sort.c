@@ -25,11 +25,11 @@ void selection_sort(int *array, size_t size)
 			if (array[b] < array[c])
 				c = b;
 
-			if (array[a] > array[b])
+			if (array[a] > array[c])
 			{
-				tmp = array[b];
-				array[b] = array[a];
-				array[a] = tmp;
+				tmp = array[a];
+				array[a] = array[c];
+				array[c] = tmp;
 				print_array(array, size);
 			}
 		}
