@@ -24,14 +24,14 @@ void selection_sort(int *array, size_t size)
 		{
 			if (array[b] < array[c])
 				c = b;
+		}
 
-			if (array[a] > array[c])
-			{
-				tmp = array[a];
-				array[a] = array[c];
-				array[c] = tmp;
-				print_array(array, size);
-			}
+		if (array[a] > array[c])
+		{
+			tmp = array[a];
+			array[a] = array[c];
+			array[c] = tmp;
+			print_array(array, size);
 		}
 	}
 }
