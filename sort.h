@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* structures declaration section */
 
@@ -28,6 +29,7 @@ void print_list(const listint_t *);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void quick_sort(int *, size_t);
+void selection_sort(int *array, size_t size);
 
 /* extra function */
 void swap_nodes(listint_t *node1, listint_t *node2);
