@@ -12,21 +12,24 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j;
+	size_t a, b, c;
 	int tmp;
 
 	if (!array || !size)
 		return;
 
-	for (i = 0; i < size; i++)
+	for (a = 0; a < size; a++)
 	{
-		for (j = size - 1; j > i; j--)
+		for (b = size - 1, c = a + 1; b > a; b--)
 		{
-			if (array[i] > array[j])
+			if (array[b] < array[c])
+				c = b;
+
+			if (array[a] > array[b])
 			{
-				tmp = array[j];
-				array[j] = array[i];
-				array[i] = tmp;
+				tmp = array[b];
+				array[b] = array[a];
+				array[a] = tmp;
 				print_array(array, size);
 			}
 		}
