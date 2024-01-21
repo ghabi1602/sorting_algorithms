@@ -6,15 +6,18 @@
  * @size: size of the array
  * Return: none
  */
+
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, n = size;
-	int aux, swap = 1;
+	size_t i, a;
+	int aux;
 
-	while (swap)
+	if (!array || !size)
+		return;
+	a = 0;
+	while (a < size)
 	{
-		swap = 0;
-		for (i = 0; i < n - 1; i++)
+		for (i = 0; i < size - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
@@ -22,10 +25,8 @@ void bubble_sort(int *array, size_t size)
 				array[i] = array[i + 1];
 				array[i + 1] = aux;
 				print_array(array, size);
-				swap = 1;
 			}
 		}
-		n -= 1;
+		a++;
 	}
-	print_array(array, size);
 }
