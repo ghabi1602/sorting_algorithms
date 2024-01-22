@@ -33,6 +33,7 @@ void selection_sort(int *array, size_t size);
 
 /* advanced task declaration */
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
 
 /* extra function */
 void swap_nodes(listint_t *node1, listint_t *node2);
